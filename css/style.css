@@ -1,0 +1,481 @@
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../IMG/background.png");
+}
+
+li {
+  list-style: none;
+}
+
+#first {
+  display: block;
+  color: white;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+#first #first_text_headline {
+  position: absolute;
+  font-size: 7em;
+  text-align: center;
+  width: 100%;
+  height: 20%;
+  z-index: 100;
+  top: 40vh;
+  -webkit-animation: firstTextAnimation 2s 1 forwards;
+          animation: firstTextAnimation 2s 1 forwards;
+}
+
+#first #first_text_headline #first_text_my_name {
+  position: absolute;
+  font-size: 0.2em;
+  text-align: center;
+  width: 100%;
+  height: 10%;
+  z-index: 100;
+}
+
+#first #first_text_headline #first_text_my_name_heart {
+  fill: none;
+  stroke: white;
+  stroke-width: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#first #object_sun {
+  position: absolute;
+  width: 300px;
+  top: -150px;
+  left: calc(50vw - 150px);
+}
+
+#first #object_planeta {
+  position: absolute;
+  width: 150px;
+  top: 5vh;
+  left: 60vw;
+  -webkit-transform-origin: -10vw -5vh;
+          transform-origin: -10vw -5vh;
+  -webkit-animation: animationSun 1s 1 forwards;
+          animation: animationSun 1s 1 forwards;
+}
+
+#first #object_earth {
+  position: absolute;
+  width: 100px;
+  top: 20vh;
+  left: 70vw;
+  -webkit-transform-origin: -20vw -20vh;
+          transform-origin: -20vw -20vh;
+  -webkit-animation: animationEarth 2s 1 forwards;
+          animation: animationEarth 2s 1 forwards;
+}
+
+#first #object_saturn {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  top: 40vh;
+  left: 15vw;
+  -webkit-transform-origin: calc(35vw) -40vh;
+          transform-origin: calc(35vw) -40vh;
+  -webkit-animation: animationSaturn 1.5s 1 forwards;
+          animation: animationSaturn 1.5s 1 forwards;
+}
+
+#second {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: black;
+}
+
+#second #navbar {
+  color: white;
+  height: 2vh;
+  width: 98%;
+  text-align: center;
+  font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+}
+
+#second #navbar img {
+  width: 50px;
+  height: auto;
+}
+
+#second #object_planetOrbit {
+  position: relative;
+  width: auto;
+  height: 400px;
+  margin: auto;
+  left: calc(50vw - 200px);
+}
+
+#second #object_planetOrbit #orbit {
+  fill: none;
+  stroke: white;
+  stroke-width: 3;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1000;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: dash 2s linear forwards;
+          animation: dash 2s linear forwards;
+}
+
+#second #object_planetOrbit #planet {
+  fill: none;
+  stroke: white;
+  stroke-width: 3;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1000;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: dash 2s linear forwards;
+          animation: dash 2s linear forwards;
+}
+
+#second #object_planetOrbit #island {
+  fill: none;
+  stroke: white;
+  stroke-width: 3;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1000;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: dash 2s linear forwards;
+          animation: dash 2s linear forwards;
+}
+
+#second #pageTwoText {
+  color: white;
+  position: relative;
+  text-align: center;
+  font-size: 5em;
+  padding: 1em;
+}
+
+#second #container_line {
+  top: 6vh;
+  width: 100%;
+  height: 1em;
+  position: relative;
+  text-align: center;
+}
+
+#second #container_line #second_line {
+  width: 80%;
+  margin: auto;
+}
+
+#third {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+#third #third_container {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  width: 100%;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 50px 95vh 70vh 70vh 50px;
+      grid-template-rows: 50px 95vh 70vh 70vh 50px;
+      grid-template-areas: "navbar  navbar navbar navbar" "main main main main" "text1 text1 image1 image1" "image2 image2 text2 text2" "footer footer footer footer";
+}
+
+#third #third_container #third_navbar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: navbar;
+  height: auto;
+  background-color: black;
+  color: white;
+}
+
+#third #third_container #third_navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1em;
+}
+
+#third #third_container #third_navbar ul li {
+  font-size: 1em;
+}
+
+#third #third_container #third_navbar ul li img {
+  height: 50px;
+}
+
+#third #third_container #third_main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: main;
+}
+
+#third #third_container #third_main img {
+  width: 100%;
+  height: 95vh;
+}
+
+#third #third_container #third_text_1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: text1;
+  min-height: 50vh;
+  padding: 1em;
+  overflow: auto;
+  background-color: #99996681;
+}
+
+#third #third_container #third_imageBlock_1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: image1;
+}
+
+#third #third_container #third_imageBlock_1 img {
+  width: 100%;
+  height: 100%;
+}
+
+#third #third_container #third_text_2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: text2;
+  min-height: 50vh;
+  padding: 1em;
+  overflow: auto;
+  background-color: #99996681;
+}
+
+#third #third_container #third_imageBlock_2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: image2;
+}
+
+#third #third_container #third_imageBlock_2 img {
+  width: 100%;
+  height: 100%;
+}
+
+#third #third_container #footer {
+  color: white;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: footer;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+#third #third_container #footer ul {
+  text-align: center;
+  margin: 1em;
+}
+
+.floatButton {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 5vh;
+  top: 95vh;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.floatButton .arrowButton {
+  position: relative;
+  top: 1vh;
+  width: 50px;
+  height: 2vh;
+  -webkit-animation: jumpArrow 1s infinite linear;
+          animation: jumpArrow 1s infinite linear;
+}
+
+@-webkit-keyframes animationSun {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(100deg);
+            transform: rotate(100deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes animationSun {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(100deg);
+            transform: rotate(100deg);
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes animationSaturn {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-55deg);
+            transform: rotate(-55deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes animationSaturn {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-55deg);
+            transform: rotate(-55deg);
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes animationEarth {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes animationEarth {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes firstTextAnimation {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-1vh);
+            transform: translateY(-1vh);
+  }
+}
+
+@keyframes firstTextAnimation {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-1vh);
+            transform: translateY(-1vh);
+  }
+}
+
+@-webkit-keyframes orbitRotation {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitRotation {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes jumpArrow {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-1vh);
+            transform: translateY(-1vh);
+  }
+}
+
+@keyframes jumpArrow {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-1vh);
+            transform: translateY(-1vh);
+  }
+}
+/*# sourceMappingURL=style.css.map */

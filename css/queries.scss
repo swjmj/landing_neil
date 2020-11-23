@@ -1,0 +1,124 @@
+// first visual
+
+@media (max-width: 600px), (max-height: 600px) {
+  #first #object_sun {
+    // transform: scale(0.3);
+    width: 150px;
+    top: -75px;
+    left: calc(50vw - 75px);
+  }
+  #first #object_planeta {
+    width: 75px;
+    top: 15vh;
+    left: 60vw;
+    transform-origin: -10vw -5vh;
+  }
+  #first #object_earth {
+    width: 50px;
+    top: 23vh;
+    left: 70vw;
+    transform-origin: -20vw -10vh;
+  }
+  #first #object_saturn {
+    width: 75px;
+    height: 75px;
+    top: 40vh;
+    left: 15vw;
+    transform-origin: calc(35vw - 50px) -30vh;
+  }
+  #first #first_text_headline {
+    font-size: 4em;
+    top: 60vh;
+  }
+}
+
+//second visual
+@media (max-height: 750px) and (min-height: 550px) {
+  #second #object_planetOrbit {
+    height: 300px;
+    left: calc(50vw - 150px);
+  }
+  #second #navbar {
+    font-size: 1.5em;
+    height: 50px;
+    .about {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-right: 1em;
+    }
+  }
+  #second #pageTwoText {
+    font-size: 3em;
+  }
+}
+@media (max-width: 500px), (max-height: 550px) {
+  #second #object_planetOrbit {
+    height: 150px;
+    left: calc(50vw - 75px);
+  }
+  #second #navbar {
+    font-size: 1em;
+    height: 50px;
+
+    .about {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-right: 1em;
+    }
+  }
+
+  #second #pageTwoText {
+    font-size: 3em;
+  }
+}
+
+//third visual
+@media (max-width: 600px) {
+  #third #third_container {
+    display: flex;
+    flex-direction: column;
+  }
+  #third_container #thirdMainImage {
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  #third_container #third_navbar {
+    min-width: 50px;
+  }
+  #third #third_container #third_navbar ul li {
+    font-size: 1em;
+  }
+  #third #third_container #third_navbar .about {
+    margin: auto 0;
+  }
+  #third #third_container #third_text_1 {
+    width: auto;
+    height: auto;
+    min-height: auto;
+  }
+  #third #third_container #third_text_2 {
+    width: auto;
+    height: auto;
+    min-height: auto;
+    max-height: 50vh;
+  }
+}
+@media (max-height: 550px) {
+  #third #third_container #third_navbar ul li {
+    font-size: 1em;
+  }
+  #third #third_container #third_navbar .about {
+    margin: auto 0;
+  }
+  #third #third_container #third_text_1 {
+    width: auto;
+    height: auto;
+    min-height: auto;
+  }
+  #third #third_container #third_text_2 {
+    width: auto;
+    height: auto;
+    min-height: auto;
+    max-height: 50vh;
+  }
+}
